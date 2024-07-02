@@ -1,26 +1,26 @@
-import React from "react";
+import {formatISO9075} from 'date-fns'
+import { Link } from 'react-router-dom';
 
-export default function Post() {
+export default function Post({_id, title, summary, cover, content, createdAt, author}) {
   return (
     <div className="post">
       <div className="image">
-        <img
-          src="https://img.freepik.com/free-photo/sports-car-driving-asphalt-road-night-generative-ai_188544-8052.jpg?size=626&ext=jpg&ga=GA1.1.1141335507.1718323200&semt=sph"
-          alt=""
-        />
+        <Link to={`/post/${_id}`}>
+          <img src={'http://localhost:4000/'+cover} alt=""/>
+        </Link>
       </div>
       <div className="text">
+      <Link to={`/post/${_id}`}>
         <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-          ea!
+          {title}
         </h2>
+      </Link>
         <p className="info">
-          <a className="author">Shehzor Memon</a>
-          <time>2024-06-19 16:45</time>
+          <a className="author">{author.username}</a>
+          <time>{formatISO9075(new Date(createdAt))}</time>
         </p>
         <p className="summary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-          laborum quod fugit neque quas maiores.
+          {summary}
         </p>
       </div>
     </div>
