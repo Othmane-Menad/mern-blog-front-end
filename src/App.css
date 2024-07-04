@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  cursor: pointer;
+}
+
 body {
   color: #333;
 }
@@ -25,6 +29,16 @@ header {
 }
 
 header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a:hover {
+  text-decoration: underline;
+  color: crimson;
+}
+
+header a.logo:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -104,6 +118,11 @@ button {
   color: #fff;
   border-radius: 5px;
   padding: 7px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: crimson;
 }
 
 form.login h1, form.register h1 {
@@ -135,7 +154,7 @@ div.post-page h1 {
 div.post-page time {
   text-align: center;
   display: block;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: #aaa;
 }
 
@@ -150,3 +169,27 @@ div.post-page div.content p {
   line-height: 1.6rem;
 }
 
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+div.post-page a.edit-btn:hover {
+  background-color: crimson;
+}
+
+a svg {
+  height: 20px;
+  width: 24px;
+}
