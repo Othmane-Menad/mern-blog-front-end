@@ -2,6 +2,24 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Video Link: https://lnkd.in/dRbEdFeJ
+FEATURES:
+------------------------------------
+* Authentication (Login/Signup)
+* Create Blogs
+* Edit Blogs
+* Mobile Responsive
+TECH STACK:
+------------------------------------
+* ReactJs
+* Javascript and ES+6
+* CSS
+* JWT Authentication
+* NodeJs
+* ExpressJs
+* MongoDB Atlas
+* React-quill Library
+
 ## Available Scripts
 
 In the project directory, you can run:
